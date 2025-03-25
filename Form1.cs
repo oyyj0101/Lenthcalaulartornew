@@ -16,5 +16,15 @@ namespace Lenthcalaulartornew
         {
             InitializeComponent();
         }
+
+        private void btnAllClear_Click(object sender, EventArgs e)
+        {
+            txtCM.Text = "";
+            txtM.Text = "";
+            txtKM.Text = "";
+            txtIn.Text = "";
+            txtFt.Text = "";
+            txtYard.Text = "";
+        }
     }
 }
