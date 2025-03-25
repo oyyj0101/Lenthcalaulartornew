@@ -28,27 +28,24 @@ namespace Lenthcalaulartornew
         }
         string strInput;
         double douOutput;
+        void caculateAnswer(int 輸入, double 要轉換的數值)
+        {
+            if (輸入 != 0)
+                txtCM.Text = string.Format("{0:0.##########}", 要轉換的數值);
+            if (輸入 != 1)
+                txtM.Text = string.Format("{0:0.##########}", 要轉換的數值 / 100);
+            if (輸入 != 2)
+                txtKM.Text = string.Format("{0:0.##########}", 要轉換的數值 / 100000);
+            if (輸入 != 3)
+                txtIn.Text = string.Format("{0:0.##########}", 要轉換的數值 / 2.54);
+            if (輸入 != 4)
+                txtFt.Text = string.Format("{0:0.##########}", 要轉換的數值 / 30.48);
+            if (輸入 != 5)
+                txtYard.Text = string.Format("{0:0.##########}", 要轉換的數值 / 91.44);
+        }
         private void txtCM_KeyUp(object sender, KeyEventArgs e)
         {
             strInput = txtCM.Text;
-            void caculateAnswer(int 輸入, double 要轉換的數值)
-            {
-                if (double.TryParse(strInput, out douOutput) == true)
-                {
-                    txtM.Text = string.Format("{0:0.##########}", 要轉換的數值 / 100);
-                    txtKM.Text = string.Format("{0:0.##########}", 要轉換的數值 / 100000);
-                    txtIn.Text = string.Format("{0:0.##########}", 要轉換的數值 / 2.54);
-                    txtFt.Text = string.Format("{0:0.##########}", 要轉換的數值 / 30.48);
-                    txtYard.Text = string.Format("{0:0.##########}", 要轉換的數值 / 91.44);
-
-                    caculateAnswer(0, douOutput);
-                }
-                else
-                {
-                    txtInfo.Text = "請輸入數字";
-                    txtCM.Text = "";
-                }
-            }
         }
     }
 }
