@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,7 +17,13 @@ namespace Lenthcalaulartornew
         {
             InitializeComponent();
         }
-
+        public void cool()
+        {
+                string[] contents = { "(ゝ∀･)", "(   ꒪꒫꒪)", " ˃ ⤙ ˂", "(╬☉д⊙)", "٩(๑`ȏ´๑)۶" };
+                Random random = new Random();
+                int index = random.Next(contents.Length);
+                Console.WriteLine(contents[index]);
+        }
         private void btnAllClear_Click(object sender, EventArgs e)
         {
             txtCM.Text = "";
@@ -37,7 +44,7 @@ namespace Lenthcalaulartornew
             }
             else
             {
-                txtInfo.Text = "請輸入數字";
+                txtInfo.Text = "請輸入數字"; cool();
                 txtCM.Text = "";
             }
         }
